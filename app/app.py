@@ -3,6 +3,7 @@ import pandas as pd
 import shap
 import matplotlib.pyplot as plt 
 import joblib
+from pathlib import Path
 
 st.set_page_config(page_title="Dementia Prediction System",
                    page_icon="🧠",
@@ -40,7 +41,10 @@ st.sidebar.write("B.Tech Biotechnology")
 # ==========================
 
 try:
-    rf_model = joblib.load("C:\\Users\\ayush kumar singh\\Desktop\\Dementia_Project\\models\\random_forest_model.pkl")
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    MODEL_PATH = BASE_DIR / "models" / "random_forest_model.pkl"
+
+    rf_model = joblib.load(MODEL_PATH)
     st.success("✅ Model Loaded Successfully")
 
 except Exception as e:
