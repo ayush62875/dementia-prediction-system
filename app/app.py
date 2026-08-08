@@ -40,7 +40,7 @@ st.sidebar.write("B.Tech Biotechnology")
 # ==========================
 
 try:
-    rf_model = joblib.load(r"C:\Users\ayush kumar singh\Desktop\Dementia_Project\models\random_forest_model.pkl")
+    rf_model = joblib.load("C:\\Users\\ayush kumar singh\\Desktop\\Dementia_Project\\models\\random_forest_model.pkl")
     st.success("✅ Model Loaded Successfully")
 
 except Exception as e:
