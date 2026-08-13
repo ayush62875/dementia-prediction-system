@@ -254,8 +254,8 @@ if predict_button:
         value=f"{dementia_probability:.2f}%"
         )
 
-#Risk level
-    # ==========================
+
+#==========================
 # Risk Assessment
 # ==========================
 
